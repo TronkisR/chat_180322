@@ -31,12 +31,14 @@ let vards = document.querySelector('.vards')
         let datiNoServera = await fetch(API + '/lasit');
         let dati = await datiNoServera.json();
 
-        console.log(await dati[0]['zina'])
+        //console.log(await dati[0]['zina'])
+        zinas.innerHTML = '';
 
         i = 0; 
         while ( i < await dati.lenght )
         {
             console.log( i )
+            zinas.innerHTML = zinas.innerHTML+dati[i]['zina'];
             i = i + 1;
         }
-    }
+    } // 'seit beidzas funkcija ieladetChataZinasJson'
