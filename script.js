@@ -12,7 +12,7 @@ let vards = document.querySelector('.vards')
 
         
 
-        zinas.innerHTML = zinas.innerHTML + '<br /> ' + zina.value;
+        zinas.innerHTML = zinas.innerHTML + '<br /> ' + vards.value +':'+ zina.value;
         fetch(API +'/sutit'+ vards.value + '/' +zina.value)
 
 
