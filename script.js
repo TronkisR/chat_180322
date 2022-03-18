@@ -41,4 +41,6 @@ let vards = document.querySelector('.vards')
             zinas.innerHTML = zinas.innerHTML+dati[i]['zina'];
             i = i + 1;
         }
+
+        zinas.scrollTop = zinas.scrollHeight;
     } // 'seit beidzas funkcija ieladetChataZinasJson'
