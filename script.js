@@ -23,4 +23,11 @@ let zinas = document.querySelector('.chataZinas');
         let dati = await datiNoServera.text();
         zinas.innerHTML = dati;
     }
-    setInterval( ieladetChataZinas, 1000 )
+    //setInterval( ieladetChataZinas, 1000 )
+
+    async function ieladetChataZinasJson()
+    {
+        let datiNoServera = await fetch('chatazinas.txt');
+        let dati = await datiNoServera.text();
+        zinas.innerHTML = dati;
+    }
