@@ -12,7 +12,7 @@ let vards = document.querySelector('.vards')
 
         
 
-        zinas.innerHTML = zinas.innerHTML + '<br /> ' + vards.value +':'+ zina.value;
+        zinas.innerHTML = zinas.innerHTML + '<br /> ' + zina.value;
         fetch(API +'/sutit'+ vards.value + '/' +zina.value)
 
 
@@ -30,10 +30,13 @@ let vards = document.querySelector('.vards')
     {
         let datiNoServera = await fetch(API + '/lasit');
         let dati = await datiNoServera.json();
-       i = 0; 
-       while ( i < await dati.lenght )
-       {
+
+        console.log(await dati[0]['zina'])
+
+        i = 0; 
+        while ( i < await dati.lenght )
+        {
             console.log( i )
             i = i + 1;
-       }
+        }
     }
