@@ -1,5 +1,7 @@
 //console.log(2)
 
+const API = "https://chat2022.gundegadekena.repl.co"  // nado ukazat svoj !!!!
+
 let zina = document.querySelector('.manaZina');
 let zinas = document.querySelector('.chataZinas');
 
@@ -10,6 +12,7 @@ let zinas = document.querySelector('.chataZinas');
         
 
         zinas.innerHTML = zinas.innerHTML + '<br /> ' + zina.value;
+        fetch(API +'/sutit'+vards.value+'/'+zina.value)
 
 
     }
@@ -20,4 +23,4 @@ let zinas = document.querySelector('.chataZinas');
         let dati = await datiNoServera.text();
         zinas.innerHTML = dati;
     }
-    setInterval( ieladetChataZinas )
+    setInterval( ieladetChataZinas, 1000 )
